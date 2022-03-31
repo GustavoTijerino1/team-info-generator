@@ -5,10 +5,11 @@
 // const allMembers = []
 // const internal = require('stream');
 
+// global variables
 const inquirer = require('inquirer')
 const fs = require('fs');
 
-
+// This function starts it off and ask about questions for Manager
 const boss = () => {
   return inquirer.prompt([
     {
@@ -33,7 +34,7 @@ const boss = () => {
       
     },
   ])
-
+// then the answers go here and create an HTML with the answers inbedded
 .then ((response) => {
 
   
@@ -82,14 +83,15 @@ const boss = () => {
            `, (err) =>
            err ? console.error(err) : console.log('HTML file created')
            );
+          //  Activates function that lets user to pick a type of employee
            teamMem()
           });
         }
-        
+        // calls function
         boss()
         
-        
-        const employee = () => {
+        // this function ask questions if you picked Engineer
+        const engineer = () => {
           return inquirer.prompt([
 
     {
@@ -150,7 +152,7 @@ const boss = () => {
 
 
 
-
+ // this function ask questions if you picked Intern
 const intern = () => {
   return inquirer.prompt([
     {
@@ -188,16 +190,16 @@ const intern = () => {
             <h3>🧑‍🎓 Intern</h3>
           </div>
               <ul>
-              <li>
-              Email: <a href="mailto:${response.email}.com">${response.email}</a> <!-- email -->
-              </li>
-              <li>
-                  Id: ${response.id}   <!-- id -->
-                  </li>
+                <li>
+                Email: <a href="mailto:${response.email}.com">${response.email}</a> <!-- email -->
+                </li>
+                <li>
+                Id: ${response.id}   <!-- id -->
+                </li>
                 <li>
                 School: ${response.school} <!-- school -->
                 </li>
-                </ul>
+              </ul>
         </div>
     </main>
       `
@@ -208,11 +210,11 @@ const intern = () => {
   });
 }
 
-
+// If user chooses DONE then it ends everything.
 const done = () => {
   return null
 }
-
+// Lets user decide on which employee to make
 const teamMem = () => {
   return inquirer.prompt([
  {
@@ -228,7 +230,7 @@ const teamMem = () => {
       intern()
     } else if (choice.role === 'Engineer') {
       
-      employee()
+      engineer()
 
   } else  {
     done()
