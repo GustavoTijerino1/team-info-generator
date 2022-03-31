@@ -63,7 +63,7 @@ const boss = () => {
               </div>
               <ul>
                 <li>
-                Email:  <a href="${response.email}.com">${response.email}</a> <!-- email -->
+                Email:  <a href="mailto:${response.email}.com">${response.email}</a> <!-- email -->
                 </li>
                 <li>
                 Id: ${response.id} <!-- id -->
@@ -118,9 +118,6 @@ const boss = () => {
    
     
   ]).then( choice => {
-    if (choice.role === 'Intern'){
-      intern()
-    };
     
     fs.appendFileSync('index.html', 
     `
@@ -132,13 +129,13 @@ const boss = () => {
       </div>
       <ul>
         <li>
-        Email: <a href="${choice.email}.com">${choice.email}</a> <!-- email -->
+        Email: <a href="mailto:${choice.email}.com">${choice.email}</a> <!-- email -->
         </li>
         <li>
         Id: ${choice.id}   <!-- id -->
         </li>
         <li>
-        GitHub:  <a href=${choice.gitHub}"target="_blank"></a> <!-- github  -->
+        <a href="https://github.com/${choice.github}"target="_blank"> GitHub</a> <!-- github  -->
         </li>
       </ul>
     </div>
@@ -192,7 +189,7 @@ const intern = () => {
           </div>
               <ul>
               <li>
-              Email: <a href="${response.email}.com">${response.email}</a> <!-- email -->
+              Email: <a href="mailto:${response.email}.com">${response.email}</a> <!-- email -->
               </li>
               <li>
                   Id: ${response.id}   <!-- id -->
