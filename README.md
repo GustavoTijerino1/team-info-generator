@@ -9,6 +9,7 @@ This project lets you generate your own Team.
 - [Usage](#usage)
 - [Credits](#credits)
 - [License](#license)
+- [Contact me](#contact-me)
 
 ## Installation
 
@@ -22,6 +23,8 @@ This project lets you generate your own Team.
 
 [index.js - bootcamp - Visual Studio Code 2022-03-31 22-21-09.zip](https://github.com/GustavoTijerino1/team-info-generator/files/8394473/index.js.-.bootcamp.-.Visual.Studio.Code.2022-03-31.22-21-09.zip)
 
+## Credits 
+Zachary Auerbach
 
 ## License
 
